@@ -1,11 +1,26 @@
-body{
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/Jaguarb.jpg);
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.608), rgba(0, 0, 0, 0.608)),url(../img/Jaguarb.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-nav{
+nav {
+    
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    
+}
+
+footer {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
+    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,34 +30,50 @@ nav{
     font-weight: bold;
 }
 
-h1{
+h1 {
     color: white;
     font-size: 45px;
 }
 
-ul li{
+ul li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: rgb(218, 195, 21);
 }
 
-.jaguar{
+.jaguar {
     color: white;
     font-size: 50px;
 }
 
-p{
+p {
     color: white;
-    font-size: 30px;
-    width: 50%;
-    margin: 70px;
+    font-size: 20px;
     text-align: justify;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px;
+    
+    
+}
+
+.text {
+    width: 50%;
+}
+
+.image {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
 }

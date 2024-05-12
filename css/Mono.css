@@ -1,15 +1,30 @@
-body{
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/Monob.jpg);
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.608), rgba(0, 0, 0, 0.608)),url(../img/Monob.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-nav{
+nav {
+    
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    
+}
+
+footer {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
     padding-left: 5%;
     padding-right: 5%;
     font-weight: bold;
@@ -34,15 +49,33 @@ a:hover{
     color: rgb(39, 230, 128);
 }
 
-.jaguar{
+.monos {
     color: white;
     font-size: 50px;
 }
 
-p{
+
+p {
     color: white;
-    font-size: 30px;
-    width: 50%;
-    margin: 70px;
+    font-size: 20px;
+    margin: 30px;
     text-align: justify;
 }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px;
+}
+
+.text {
+    width: 50%;
+}
+
+.image {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
