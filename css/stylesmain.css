@@ -1,87 +1,107 @@
-body{
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/Selva1.jpg);
+/* Estilo general para el fondo */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/Selva1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 20px 5%;
     font-weight: bold;
 }
 
-h1{
+h1 {
     color: white;
     font-size: 45px;
 }
 
-ul li{
+ul li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: rgb(28, 165, 165);
 }
 
-.slider-box{
-    width: 100em;
-    height: auto;
-    margin: 50px auto 0;
+/* Estilos del contenedor principal del slider */
+.slider-box {
+    background-color: #FFFFFF;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    height: 270px; /* El slider ocupará la altura completa de la pantalla */
 }
 
-.slider-box ul{
+.slider-box ul {
+
+    background-color: #3b3636;
     display: flex;
+    width: calc(100% * 5); /* Cambia el número según la cantidad de slides */
+    margin: 0;
     padding: 0;
-    width: 400%;
-    animation: slide 20s infinite alternate ease-in-out;
+    animation: slide 20s infinite ease-in-out; /* Duración de cada transición */
 }
 
-.slider-box li{
+.slider-box li {
+    background-color: #4e0303;
     width: 100%;
     list-style: none;
-    position: relative;
+    display: flex; /* Para alinear imagen y texto horizontalmente */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
 }
 
-.texto{
-    position: absolute;
-    text-align: center;
-    padding: 0 25px;
-    top: 250px;
-    color: #FFFFFF;
+.info {
+    background-color: #0d0650;
+    
+    width: 45%;
+    text-align: left;
 }
 
-.texto h2{
+.info h2 {
     font-size: 45px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     color: #FFFFFF;
 }
 
-.slider-box img{
-    width: 30%;
-    height: auto;
+.info p {
+    color: #FFFFFF;
+    font-size: 18px;
 }
 
-@keyframes slide{
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
+.imagen img{
+    background-color: antiquewhite;
+    width: 500px;
+    height: auto    ;
+}
 
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
 
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
 
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+
+    100% { margin-left: -400%; }
 }
