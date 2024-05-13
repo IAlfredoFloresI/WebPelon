@@ -5,80 +5,287 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Selva</title>
     <link rel="stylesheet" href="../css/stylesmain.css">
-    <link rel="icon" type="image/png" href="../img/mono2.png">
+    <link rel="js" href="index.js">
+    <link rel="icon" type="image/png" href="/img/mono2.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
-<body>
-    <header>
-        <nav>
-            <h1>SELVA</h1>
-            <ul>
-                <li><a href="jaguar.html">JAGUAR</a></li>
-                <li><a href="mono.html">MONO</a></li>
-                <li><a href="tapir.html">TAP&Iacute;R</a></li>
-                <li><a href="boa.html">BOA</a></li>
-                <li><a href="guacamaya.html">GUACAMAYA</a></li>
-                <li><a href="galeria.html">GALER&IacuteA</a></li>
-            
-            </ul>
-        </nav>
-    </header>
+<style>
+    body{
+        background-color: #070707;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     
-    <div class="slider-box">
+    nav{
+        background-image: linear-gradient(#000000bf, #000000bf), url(../img/1.webp);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 20px;
+        font-weight: bold;      
+    }
+    
+    h1{
+        color: white;
+        font-size: 45px;
+    }
+    
+    ul li{
+        display: inline-block;
+        padding: 0px 20px;
+    }
+    
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    a:hover{
+        color: rgb(28, 165, 165);
+        text-decoration: none;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .swiper-slide img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .swiper-pagination-bullet {
+        width: 25px; 
+        height: 5px;
+        background-color: #ffffff; 
+        opacity: 0.5;
+    }
+    .swiper-pagination-bullet-active {
+        opacity: 1; 
+    }
+    .swiper-button-next, .swiper-button-prev {
+        color: #0015ff; 
+        bottom: 10px; 
+        position: absolute;
+        top: auto;
+        bottom: -60px; 
+        width: 20px; 
+        height: 20px; 
+        background-color: #fff; 
+        border-radius: 25px; 
+        padding: 10px;
+    }
+
+    .swiper-button-prev {
+        left: 50%;
+        margin-left: -100px;
+    }
+    .swiper-button-next {
+        right: 50%; 
+        margin-right: -100px; 
+    }
+
+    .swiper-container {
+        overflow: visible; 
+    }
+
+    .contenedor-texto {
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .subtitulo {
+        color: #ffffff;
+        margin-bottom: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+    }
+    .descripcion {
+        font-family:'Arial Narrow';
+        margin-left: 280px;
+        margin-bottom: 50px;
+        width: 800px;
+        display: flex;
+        text-align: justify;
+        padding: 90px;
+    }
+
+    h2 {
+        background-image: linear-gradient(#859933, #859933);
+        display: flex;
+        color: #FFFFFF;
+        justify-content: center;
+        margin-top: 50px;
+        padding: 30px;
+        font-size: 30px;
+    }
+
+    h3{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+    }
+       
+/* 
+859933
+A4D279
+E0D0A3
+1C541D
+*/
+
+    .contenedor-carrusel-texto{
+        color:#FFFFFF;
+        width: 700px;
+        display: flex;
+        margin-left: 400px;
+        font-family:'Arial Narrow';
+        text-align: justify;
+    }
+
+    footer {
+        background-image: linear-gradient(#000000bf, #000000bf), url(../img/1.webp);
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 100.5%;
+        height:70px;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: -100px;
+        
+    }
+        
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #000000; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #2d2d2d; 
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #4d4c4c; 
+    }
+</style>
+<body>
+    <nav>
+        <h1>SELVA</h1>
         <ul>
-            <li class="slide">
-
-                <div class="imagen">
-                    <img src="../img/Jaguar.jpg" alt="Jaguar">
-                </div>                
-                <div class="info">
-                    <h2>JAGUAR</h2>
-                    <p>El depredador principal de la jungla por definición,
-                        un poderoso felino con las fuerza para ser la cima
-                        de la cadena alimenticia</p>
-                </div>
-            </li>
-
-            <li>
-                <img src="../img/Mono.jpg">
-                <div class="texto">
-                    <h2>MONO</h2>
-                    <p>
-                        "Posible texto"
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <img src="../img/Tapir.jpg">
-                <div class="texto">
-                    <h2>TAP&Iacute;R</h2>
-                    <p>
-                        "Posible texto"
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <img src="../img/Boa.jpg">
-                <div class="texto">
-                    <h2>BOA</h2>
-                    <p>
-                        "Posible texto"
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <img src="../img/Guacamaya.jpg">
-                <div class="texto">
-                    <h2>GUACAMAYA</h2>
-                    <p>
-                        "Posible texto"
-                    </p>
-                </div>
-            </li>
+            <li><a href="jaguar.html">JAGUAR</a></li>
+            <li><a href="mono.html">MONO</a></li>
+            <li><a href="tapir.html">TAPÍR</a></li>
+            <li><a href="boa.html">BOA</a></li>
+            <li><a href="guacamaya.html">GUACAMAYA</a></li>
+            <li><a href="galeria.html">GALERÍA</a></li>
         </ul>
-    </div>
-    <script src="../js/carrusel.js"></script>
+    </nav>
+        
+    <header>
+        <h2>Habitantes vecinos</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/img/jaguar2.jpg" alt="jaguar"></div>
+                    <div class="swiper-slide"><img src="/img/monoaraña.jpg" alt="monoaraña"></div>
+                    <div class="swiper-slide"><img src="/img/tapir2.webp" alt="tapir"></div>
+                    <div class="swiper-slide"><img src="/img/boa2.jpg" alt="boa"></div>
+                    <div class="swiper-slide"><img src="/img/guacamaya3.jpg" alt="guacamaya"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div> 
+
+            <div class="contenedor-texto">
+                <div id="subtitulo-descripcion" class="subtitulo"></div>
+                <div id="texto-descripcion" class="descripcion"></div>
+            </div>
+    </header>
+
+    <footer>
+        <p>© 2024 Animalia. Todos los derechos reservados.</p>
+    </footer>
+<!--
+    <article>
+        <div class= "contenedor-carrusel-texto">
+            <div class="subtitulos">
+                <h3>Jaguar</h3><br>
+                Además de su habilidad para nadar, los jaguares tienen una mandíbula extremadamente poderosa, capaz de perforar caparazones de tortugas y cráneos de presas con facilidad. Pero aquí está lo intrigante: a pesar de su reputación como depredadores implacables, los jaguares tienen un lado más suave. Se ha observado que son cuidadores amorosos con sus crías, mostrando un comportamiento paternal excepcionalmente tierno. Este contraste entre su ferocidad como cazadores y su ternura como padres añade una fascinante capa de complejidad a estos majestuosos felinos.
+            </div>
+        </div>
+    </article>
+-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type:'bullets',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                init: function () {
+                    updateDescription(this.realIndex);
+                },
+                slideChange: function () {
+                    updateDescription(this.realIndex);
+                }
+            }
+        });
+
+        function updateDescription(index) {
+            const descriptions = [
+                'Además de su habilidad para nadar, los jaguares tienen una mandíbula extremadamente poderosa, capaz de perforar caparazones de tortugas y cráneos de presas con facilidad. Pero aquí está lo intrigante: a pesar de su reputación como depredadores implacables, los jaguares tienen un lado más suave. Se ha observado que son cuidadores amorosos con sus crías, mostrando un comportamiento paternal excepcionalmente tierno. Este contraste entre su ferocidad como cazadores y su ternura como padres añade una fascinante capa de complejidad a estos majestuosos felinos.',
+                'A pesar de su apariencia llamativa y sus habilidades acrobáticas, los monos araña enfrentan una amenaza invisible pero devastadora: la deforestación. La pérdida de su hábitat natural debido a la tala de árboles ha llevado a la disminución de las poblaciones de estos primates en muchas áreas. Lo que es aún más preocupante es que, como especies clave en sus ecosistemas, su declive puede tener efectos cascada en la biodiversidad de la selva tropical. Este dilema plantea interrogantes urgentes sobre cómo equilibrar el desarrollo humano con la conservación de la vida silvestre en algunas de las regiones más biodiversas del mundo.',
+                'A menudo llamados "jardineros de la selva", los tapires desempeñan un papel crucial en la dispersión de semillas en los bosques tropicales. A medida que se alimentan de frutas y vegetación, los tapires consumen una amplia variedad de semillas que luego pasan a través de sus sistemas digestivos intactas. Al hacerlo, ayudan a transportar estas semillas a diferentes áreas de la selva, facilitando así la regeneración y diversidad de la flora en su hábitat. Esta relación simbiótica entre los tapires y las plantas destaca la importancia de preservar a estos animales como guardianes de los ecosistemas tropicales.',
+                'A diferencia de muchas otras serpientes, algunas especies de boas tienen una característica peculiar llamada "heterodoncia". Esto significa que tienen dientes diferenciados en la parte frontal de su boca. Algunos de estos dientes son largos y curvados hacia atrás, lo que les ayuda a sujetar a sus presas una vez que las han atrapado, mientras que otros son más pequeños y se utilizan para mantener a la presa en su lugar mientras se la tragan. Esta adaptación única en la dentición de las boas refleja la diversidad de estrategias evolutivas que han desarrollado estas fascinantes serpientes para sobrevivir y prosperar en sus hábitats.',
+                'Aunque las guacamayas son conocidas por su plumaje vibrante y llamativo, su colorido no es solo una cuestión de estética. En realidad, estas aves utilizan su plumaje brillante como una forma de comunicación visual dentro de sus grupos sociales y para establecer su estatus en la jerarquía del grupo. Además, el colorido de las plumas de las guacamayas también desempeña un papel en el cortejo y apareamiento, ya que los machos suelen exhibir su plumaje brillante y realizar exhibiciones de vuelo impresionantes para atraer a las hembras. Así que, detrás de su apariencia deslumbrante, el plumaje de las guacamayas es una herramienta multifacética que les ayuda a navegar en su vida social y reproductiva.'
+                ];
+                const subtitles = [
+                'Jaguar',
+                'Mono Araña',
+                'Tapir',
+                'Boa',
+                'Guacamaya'
+            ];
+            document.getElementById('texto-descripcion').textContent = descriptions[index];
+            document.getElementById('subtitulo-descripcion').textContent = subtitles[index];
+        }
+    </script>
+        
 </body>
 </html>
+
