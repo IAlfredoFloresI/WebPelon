@@ -1,0 +1,146 @@
+body {
+    background-color: #000000f9;
+    background-image: linear-gradient(#000000d7, #000000e8), url('../img/VolcanCaracFondo .jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+nav {
+    background-image: linear-gradient(#2a1311, #2a1311);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5% 20px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 0; /* Eliminar cualquier margen adicional */
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: rgb(218, 195, 21);
+}
+
+ul.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+}
+
+ul.nav-menu li {
+    display: inline-block;
+}
+
+ul.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+ul.nav-menu a:hover {
+    color: rgb(218, 195, 21);
+}
+
+.Volcan {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 70px;
+}
+
+
+
+.info {
+    width: 55%;
+    text-align: justify;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.info h2 {
+    margin-top: 20px;
+    font-size: 35px;
+    color: rgb(218, 195, 21);
+}
+
+ul.content-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul.content-list li {
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 35%;  /* Menos espacio para las imágenes */
+    display: flex;
+    justify-content: center; /* Centra las imágenes dentro del contenedor */
+    align-items: center;  /* Alineación vertical para mejor estética */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    margin-top: 70px;  /* Ajusta este valor según sea necesario para separar de texto/arriba */
+    margin-bottom: 30px;  /* Ajusta este valor según sea necesario para separar de texto/abajo */
+}
+
+.info.right {
+    padding-left: 20px;  /* Asegura un espacio cuando el texto está a la derecha */
+    padding-right: 0; /* Elimina el padding derecho cuando el texto está a la derecha */
+    order: 2;  /* Mantiene el texto a la derecha */
+}
+
+/* Ajustamos la dirección del contenido para que alterne automáticamente */
+.content {
+    display: flex;
+    flex-direction: row;  /* Dirección normal */
+    flex-wrap: wrap;  /* Permite envolver elementos */
+    justify-content: space-between; /* Espacia los elementos */
+    align-items: stretch; /* Estira los elementos para llenar el espacio vertical */
+}
+
+.content:nth-child(odd) {
+    flex-direction: row;
+}
+
+.content:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+footer {
+    background-image: linear-gradient(#1c0f0a, #1c0f0a);
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: auto;
+    height:80px;
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
